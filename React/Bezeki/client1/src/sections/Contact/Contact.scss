@@ -1,0 +1,74 @@
+@import '../../Styles/palette.scss';
+.Contact {
+    background: transparent;
+    // background: $main;#
+    position: relative;
+    // background: linear-gradient(126deg, rgba(101, 101, 101, 0.09) 0%, rgba(101, 101, 101, 0.09) 68%, rgba(200, 200, 200, 0.09) 68%, rgba(200, 200, 200, 0.09) 100%), linear-gradient(164deg, rgba(238, 238, 238, 0.03) 0%, rgba(238, 238, 238, 0.03) 90%, rgba(14, 14, 14, 0.03) 90%, rgba(14, 14, 14, 0.03) 100%), linear-gradient(27deg, rgba(214, 214, 214, 0.04) 0%, rgba(214, 214, 214, 0.04) 34%, rgba(104, 104, 104, 0.04) 34%, rgba(104, 104, 104, 0.04) 100%), linear-gradient(175deg, rgba(20, 20, 20, 0.01) 0%, rgba(20, 20, 20, 0.01) 4%, rgba(9, 9, 9, 0.01) 4%, rgba(9, 9, 9, 0.01) 100%), linear-gradient(257deg, rgba(14, 14, 14, 0.01) 0%, rgba(14, 14, 14, 0.01) 28%, rgba(164, 164, 164, 0.01) 28%, rgba(164, 164, 164, 0.01) 100%), linear-gradient(311deg, rgba(68, 68, 68, 0.07) 0%, rgba(68, 68, 68, 0.07) 33%, rgba(213, 213, 213, 0.07) 33%, rgba(213, 213, 213, 0.07) 100%), linear-gradient(244deg, rgba(43, 43, 43, 0.02) 0%, rgba(43, 43, 43, 0.02) 80%, rgba(161, 161, 161, 0.02) 80%, rgba(161, 161, 161, 0.02) 100%), linear-gradient(130deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 49%, rgba(105, 105, 105, 0.04) 49%, rgba(105, 105, 105, 0.04) 100%), linear-gradient(90deg, rgb(190, 33, 111), rgb(97, 3, 0));
+    color: $text;
+    height: 75vh;
+    width: 100vw;
+    >.form {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(135deg, #3f0b0e 0%, #880b0c 100%);
+        border-radius: 5px;
+        padding: 5rem 5rem 0rem 5rem;
+        margin: 10rem;
+        width: 50rem;
+        height: 65vh;
+        text-align: left;
+        h4 {
+            color: $text2;
+            padding-left: 1rem;
+        }
+        margin: auto;
+        .input {
+            width: 100%;
+            border: none;
+            margin: .7vh 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid lightgray;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .input:focus {
+            outline: none;
+            border-bottom: 2px solid gray;
+            background: none;
+        }
+        .button {
+            user-select: none;
+            width: 5rem;
+            border: solid 1px white;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem auto;
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 0.6;
+            color: $text2;
+            background: linear-gradient(135deg, #3f0b0e 0%, #880b0c 100%);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 12px;
+            left: 1rem;
+            height: 100%;
+            width: 100%;
+            opacity: 0.7;
+            border-radius: 5px;
+            /* Declaring our shadow color inherit from the parent (button) */
+            background: inherit;
+            /* Blurring the element for shadow effect */
+            -webkit-filter: blur(6px);
+            -moz-filter: blur(6px);
+            -o-filter: blur(6px);
+            -ms-filter: blur(6px);
+            filter: blur(6px);
+            /* Transition for the magic */
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import '../../Styles/palette.scss';
+.Banner {
+    overflow: hidden;
+    height: 20rem;
+    background: $bannerBackGround;
+    >.Content-left {
+        >.Deal {
+            margin-left: 5rem;
+            h4 {
+                width: 45vw;
+                word-wrap: wrap;
+            }
+            height: 30vh;
+            overflow: hidden;
+        }
+        width: 47vw;
+        color: $bannerText;
+        background: $bannerBackGround;
+        position: absolute;
+        z-index: 2;
+        height: 20rem;
+        &::after {
+            position: absolute;
+            left: 45vw;
+            top: 0px;
+            height: 23.5rem;
+            z-index: 0;
+            width: 20rem;
+            content: "";
+            background: $bannerBackGround;
+            clip-path: ellipse(87% 67% at 10% 18%);
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 99vw;
+        height: 1vh;
+        top: 23.4rem;
+        opacity: 0.7;
+        border-radius: 5px;
+        /* Declaring our shadow color inherit from the parent (button) */
+        background: rgba($bannerText, 0.5);
+        /* Blurring the element for shadow effect */
+        -webkit-filter: blur(6px);
+        -moz-filter: blur(6px);
+        -o-filter: blur(6px);
+        -ms-filter: blur(6px);
+        filter: blur(6px);
+        /* Transition for the magic */
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s
+    }
+    >img {
+        margin-top: -5rem;
+        float: right;
+        width: 55vw;
+        height: 55vh;
+    }
+}
+
+.mainMenu {
+    position: relative;
+    top: 0;
+    margin-top: -16px;
+    height: 4.5rem;
+    // background: $menuBar;
+    background: transparent;
+    width: 100%;
+    overflow: hidden;
+    >ul {
+        overflow: hidden;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        >img {
+            margin-top: -3px;
+            width: 15rem;
+            height: 4rem;
+        }
+        >li {
+            &:hover {
+                color: rgba($color: $menuTextH, $alpha: 0.7);
+                cursor: pointer;
+            }
+            &.active {
+                // color: blue;
+                background: $menuButton;
+                color: $menuText;
+                &:hover {
+                    color: rgba($color: $menuText, $alpha: 0.7);
+                }
+            }
+            &:last-child {
+                margin-right: 2.5rem;
+            }
+            padding: 1rem 4rem 1rem 4rem;
+            font-weight: 500;
+            color: $menuText;
+        }
+    }
+    hr {
+        position: absolute;
+        top: 2rem;
+        width: 100vw;
+        left: 0vw;
+        z-index: -1;
+        border: 4px solid black;
+    }
+}

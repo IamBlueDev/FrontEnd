@@ -1,0 +1,17 @@
+@import '../../Styles/palette.scss';
+.About {
+    text-align: center;
+    margin: 10rem 0 10rem 0;
+    padding: 1rem;
+    color: $text;
+    h1 {
+        color: $text;
+    }
+    h3 {
+        color: $text2;
+        margin: auto;
+        width: 50rem;
+        line-height: 2.5rem;
+        height: 10rem;
+    }
+}

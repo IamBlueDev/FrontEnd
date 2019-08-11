@@ -1,0 +1,74 @@
+@import '../../Styles/palette.scss';
+.Content {
+    overflow: hidden;
+    background: transparent;
+}
+
+.Items {
+    color: $text;
+    font-weight: 500;
+    margin: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0rem;
+    >.Item {
+        z-index: 1;
+        height: 18rem;
+        border-radius: 5px;
+        position: relative;
+        background: linear-gradient(135deg, #3f0b0e 0%, #880b0c 100%);
+        // background: linear-gradient(135deg, $main 0%, $text 100%);
+        text-align: center;
+        margin: 5rem 0rem 0rem 5rem;
+        >h2 {
+            transform: rotate(-90deg);
+            // writing-mode: sideways-rl;
+            position: absolute;
+            top: 5rem;
+            left: -4.5rem;
+            //margin: 1rem 0 0 5rem;
+            color: rgba($color: $text, $alpha: 0.5);
+            font-weight: 700;
+            // font-weight: 300;
+        }
+        >img {
+            margin: 0.1rem 0 0 0;
+            border-radius: 5px;
+            width: 290px;
+        }
+        >h3 {
+            position: absolute;
+            top: 15rem;
+            left: 6.5rem;
+            color: $text2;
+        }
+        &:hover {
+            >h2 {
+                color: rgba($color: $text, $alpha: 1.0)
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 10px;
+            left: 1rem;
+            height: 100%;
+            width: 100%;
+            opacity: 0.7;
+            border-radius: 5px;
+            /* Declaring our shadow color inherit from the parent (button) */
+            background: inherit;
+            /* Blurring the element for shadow effect */
+            -webkit-filter: blur(6px);
+            -moz-filter: blur(6px);
+            -o-filter: blur(6px);
+            -ms-filter: blur(6px);
+            filter: blur(6px);
+            /* Transition for the magic */
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s
+        }
+    }
+}
